@@ -18,36 +18,20 @@ public abstract class HomePet implements Weight {
         this.color = color;
     }
 
-    protected String getName() {
+    private String getName() {
         return name;
     }
 
-    protected void setName(String name) {
-        this.name = name;
-    }
-
-    protected int getAge() {
+    private int getAge() {
         return age;
     }
 
-    protected void setAge(int age) {
-        this.age = age;
-    }
-
-    protected double getWeight() {
+    private double getWeight() {
         return weight;
     }
 
-    protected void setWeight(double weight) {
-        this.weight = weight;
-    }
-
-    protected double getHeight() {
+    private double getHeight() {
         return height;
-    }
-
-    protected void setHeight(double height) {
-        this.height = height;
     }
 
     protected String getColor() {
@@ -78,6 +62,6 @@ public abstract class HomePet implements Weight {
 
     public String toString() {
         return "Кличка: " + getName() + "\n" + "Возраст:" + getAge() + "\n" + "Расцветка:" + getColor() + "\n" +
-                "Рост:" + getHeight() + "\n" + "Вес:" + getWeight() + "\n";
+                "Рост:" + getHeight() + "\n" + "Вес:" + (Double) Math.floor(getWeight() * 100) / 100.0 + "\n";
     }
 }

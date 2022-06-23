@@ -86,7 +86,6 @@ public class Dog extends HomePet {
         }
         if (count == 1) {
             System.out.println("Цвет питомца соответствует стандарту");
-            count = 0;
         } else {
             System.out.println("Цвет питомца не соответствует стандарту. Чтобы узнать стандартный цвет питомца, " +
                     "необходимо вызвать метод viewColors");
@@ -95,7 +94,7 @@ public class Dog extends HomePet {
 
     @Override
     protected void viewColors() {
-        System.out.println("\nБаза с рацветками собак:");
+        System.out.println("\nБаза с расцветками собак:");
         for (String color : colorOfDog) {
             System.out.println(color);
         }

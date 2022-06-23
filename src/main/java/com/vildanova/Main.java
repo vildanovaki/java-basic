@@ -13,7 +13,7 @@ public class Main {
         dog.play(60);
         dog.play(80);
         dog.voice();
-        System.out.println(dog.toString());
+        System.out.println(dog);
 
         HomePet cat = new Cat("Katy", 1, 8, 15, "not black");
         cat.play(0);
@@ -21,6 +21,6 @@ public class Main {
         cat.checkOfColor();
         cat.viewColors();
         cat.voice();
-        System.out.println(cat.toString());
+        System.out.println(cat);
     }
 }
