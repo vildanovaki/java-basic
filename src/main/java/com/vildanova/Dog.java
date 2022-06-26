@@ -23,7 +23,7 @@ public class Dog extends HomePet {
                 System.out.println("Вес питомца снизится на 200 грамм!");
             } else {
                 System.out.println("Не стоит играть с питомцом, так как его вес составляет!" +
-                        (Double) Math.floor(weight * 100) / 100.0);
+                        Math.floor(weight * 100) / 100.0);
             }
         }
         if (min >= 10 && min <= 30) {
@@ -32,7 +32,7 @@ public class Dog extends HomePet {
                 System.out.println("Вес питомца снизится на 500 грамм!");
             } else {
                 System.out.println("Не стоит играть с питомцом, так как его вес составляет!" +
-                        (Double) Math.floor(weight * 100) / 100.0);
+                        Math.floor(weight * 100) / 100.0);
             }
         }
         if (min > 30 && min <= 60) {
@@ -41,12 +41,12 @@ public class Dog extends HomePet {
                 System.out.println("Вес питомца снизится на 800 грамм!");
             } else {
                 System.out.println("Не стоит играть с питомцом, так как его вес составляет!" +
-                        (Double) Math.floor(weight * 100) / 100.0);
+                        Math.floor(weight * 100) / 100.0);
             }
         }
         if (min > 60) {
             System.out.println("Не стоит играть с питомцом, больше 60 минут. Вес питомца составляет: " +
-                    (Double) Math.floor(weight * 100) / 100.0);
+                    Math.floor(weight * 100) / 100.0);
         }
     }
 
@@ -78,8 +78,8 @@ public class Dog extends HomePet {
     protected void checkOfColor() {
         super.checkOfColor();
         int count = 0;
-        for (int i = 0; i < colorOfDog.length; i++) {
-            if (colorOfDog[i] == getColor()) {
+        for (String s : colorOfDog) {
+            if (s == getColor()) {
                 count += 1;
                 System.out.println("Цвет питомца соответствует стандарту");
             }

@@ -4,11 +4,11 @@ public abstract class HomePet implements Weight {
 
     protected double distanceOfWalk = 0;
 
-    String name;
-    int age;
-    double weight;
-    double height;
-    String color;
+    protected String name,
+            color;
+    protected int age;
+    protected double weight,
+            height;
 
     protected HomePet(String name, int age, double weight, double height, String color) {
         this.name = name;

@@ -1,6 +1,7 @@
 package com.vildanova;
 
 public class Cat extends HomePet {
+
     protected static double maxWeight = 10;
     protected static double minWeight = 0.2;
     protected static int maxDistanceOfWalk = 2;
@@ -22,7 +23,7 @@ public class Cat extends HomePet {
                 System.out.println("Вес питомца снизится на 50 грамм!");
             } else {
                 System.out.println("Не стоит играть с питомцом, так как его вес составляет!" +
-                        (Double) Math.floor(weight * 100) / 100.0);
+                        Math.floor(weight * 100) / 100.0);
             }
         }
         if (min >= 10 && min <= 30) {
@@ -31,7 +32,7 @@ public class Cat extends HomePet {
                 System.out.println("Вес питомца снизится на 100 грамм!");
             } else {
                 System.out.println("Не стоит играть с питомцом, так как его вес составляет!" +
-                        (Double) Math.floor(weight * 100) / 100.0);
+                        Math.floor(weight * 100) / 100.0);
             }
         }
         if (min > 30 && min <= 60) {
@@ -40,12 +41,12 @@ public class Cat extends HomePet {
                 System.out.println("Вес питомца снизится на 200 грамм!");
             } else {
                 System.out.println("Не стоит играть с питомцом, так как его вес составляет!" +
-                        (Double) Math.floor(weight * 100) / 100.0);
+                        Math.floor(weight * 100) / 100.0);
             }
         }
         if (min > 60) {
             System.out.println("Не стоит играть с питомцом, больше 60 минут. Вес питомца составляет!" +
-                    (Double) Math.floor(weight * 100) / 100.0);
+                    Math.floor(weight * 100) / 100.0);
         }
     }
 
@@ -77,15 +78,14 @@ public class Cat extends HomePet {
     protected void checkOfColor() {
         super.checkOfColor();
         int count = 0;
-        for (int i = 0; i < colorOfCat.length; i++) {
-            if (colorOfCat[i] == getColor()) {
+        for (String s : colorOfCat) {
+            if (s == getColor()) {
                 count += 1;
                 System.out.println("Цвет питомца соответствует стандарту");
             }
         }
         if (count == 1) {
             System.out.println("Цвет питомца соответствует стандарту");
-            count = 0;
         } else {
             System.out.println("Цвет питомца не соответствует стандарту. Чтобы узнать стандартный цвет питомца, " +
                     "необходимо вызвать метод viewColors");
